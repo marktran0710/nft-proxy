@@ -101,6 +101,5 @@ func (svc *ResizeService) imageToPaletted(img image.Image) *image.Paletted {
 	b := img.Bounds()
 	pm := image.NewPaletted(b, palette.Plan9)
 	draw.FloydSteinberg.Draw(pm, b, img, image.ZP)
-
 	return pm
 }

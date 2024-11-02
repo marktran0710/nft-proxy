@@ -188,7 +188,6 @@ func (svc *SolanaService) CreatorKeys(tokenMint solana.PublicKey) ([]solana.Publ
 	for i, c := range *metadata.Data.Creators {
 		creatorKeys[i] = c.Address
 	}
-
 	return creatorKeys, nil
 }
 
@@ -199,6 +198,5 @@ func (svc *SolanaService) FindTokenMetadataAddress(mint solana.PublicKey, metada
 		metadataProgam[:],
 		mint[:],
 	}
-
 	return solana.FindProgramAddress(seed, metadataProgam)
 }
